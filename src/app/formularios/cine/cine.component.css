@@ -1,0 +1,121 @@
+/* General styles */
+body {
+    background-color: #0d1b2a; /* Color de fondo más oscuro en azul */
+    color: #ffffff; /* Color de texto blanco */
+    font-family: 'Verdana', sans-serif; /* Cambiada a Verdana */
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    color: #ffcc00; /* Color amarillo para el título */
+    font-size: 2.5em; /* Aumentado tamaño de fuente */
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el título */
+}
+
+/* Container for the entire interface */
+div {
+    border: 2px solid #005f73; /* Borde azul */
+    padding: 20px;
+    width: 60%; /* Aumentado ancho */
+    margin: 0 auto;
+    background-color: #0a4d68; /* Fondo más claro en azul para el contenedor */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
+}
+
+/* Form elements */
+label {
+    display: block; /* Asegúrate de que las etiquetas se muestren como bloques */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #ffffff; /* Cambiado el color del texto a blanco */
+    text-align: right; /* Alineación a la derecha */
+}
+
+input[type="text"], input[type="number"] {
+    border: 2px solid #005f73; /* Borde azul */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s; /* Añadido transición */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #ffffff; /* Color de borde al enfocar en azul */
+}
+
+input[type="checkbox"] {
+    margin: 0 10px;
+}
+
+button {
+    display: block; /* Cambiado a bloque para centrar */
+    background-color: #4122dedc; /* Color de fondo del botón en azul */
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px auto; /* Margen automático para centrar */
+    transition: background-color 0.3s, transform 0.2s; /* Añadido transición */
+}
+
+button:hover {
+    background-color: #94d2bd; /* Color de fondo al pasar el ratón en azul claro */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Sections */
+label[for="nombre"], label[for="cantidadCompradores"], label[for="cantidad"], label[for="pagoCineco"] {
+    display: inline-block;
+    width: 30%; /* Aumentado ancho para mejor alineación */
+    text-align: left; /* Alineación a la derecha */
+}
+
+input[type="text"], input[type="number"], input[type="checkbox"] {
+    display: inline-block;
+    width: 65%; /* Reducido ancho para mejor alineación */
+    margin-left: 0; /* Asegúrate de que no haya margen izquierdo */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+button {
+    display: inline-block;
+    width: 40%; /* Reducido ancho para mejor alineación */
+    margin: 10px 2%;
+}
+
+/* Payment and total */
+div p {
+    font-size: 1.3em;
+    margin: 15px 0;
+    color: #ffffff; /* Cambiado el color del texto a blanco */
+    text-align: right; /* Alineación a la derecha */
+}
+
+/* Custom styling for specific Cinepolis branding */
+.cinepolis-title {
+    background-color: #0660b5; /* Mantener el fondo original */
+    color: #ffcc00; /* Cambiar el color del texto a amarillo */
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Añadido borde redondeado */
+    color: #ffffff; /* Cambiado el color del texto a blanco */
+}
+
+.acciones button {
+    margin: 10px 15px;
+}
+
+/* Specific styling for payment with Nineco */
+input[type="text"][name="pagoCineco"] {
+    border: 2px solid #ffcc00; /* Borde amarillo para el campo de pago */
+    background-color: #e0f7fa; /* Fondo más claro para destacar */
+    font-size: 1.1em; /* Aumentar tamaño de fuente */
+}
+

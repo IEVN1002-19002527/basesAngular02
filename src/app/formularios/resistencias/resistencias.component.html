@@ -1,0 +1,237 @@
+<div style="text-align: center;">
+    <h1>Calculadora de resistencias</h1><br>
+  
+    <!-- Formulario para calcular la resistencia -->
+    <form [formGroup]="resistenciaForm" (ngSubmit)="calcular()">
+      <!-- Fila con las tres bandas -->
+      <div style="display: flex; justify-content: center; gap: 28px; align-items: flex-start;">
+        <!-- 1ra. Banda -->
+        <div style="width: 170px;">
+          <div style="text-align:center; font-weight:600; margin-bottom:6px;">1ra. Banda</div>
+          <div style="border-left: 6px solid #000; padding-left:8px;">
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="0">
+              <span style="display:inline-block; width:90px; background:#000; color:#fff; padding:6px 10px;">0</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="1">
+              <span style="display:inline-block; width:90px; background:#8B5A2B; color:#fff; padding:6px 10px;">1</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="2">
+              <span style="display:inline-block; width:90px; background:#D32F2F; color:#fff; padding:6px 10px;">2</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="3">
+              <span style="display:inline-block; width:90px; background:#F57C00; color:#fff; padding:6px 10px;">3</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="4">
+              <span style="display:inline-block; width:90px; background:#CDDC39; color:#000; padding:6px 10px;">4</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="5">
+              <span style="display:inline-block; width:90px; background:#4CAF50; color:#fff; padding:6px 10px;">5</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="6">
+              <span style="display:inline-block; width:90px; background:#1976D2; color:#fff; padding:6px 10px;">6</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="7">
+              <span style="display:inline-block; width:90px; background:#7B1FA2; color:#fff; padding:6px 10px;">7</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="8">
+              <span style="display:inline-block; width:90px; background:#9E9E9E; color:#000; padding:6px 10px;">8</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color1" value="9">
+              <span style="display:inline-block; width:90px; background:#BDBDBD; color:#000; padding:6px 10px;">9</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 2da. Banda -->
+        <div style="width: 170px;">
+          <div style="text-align:center; font-weight:600; margin-bottom:6px;">2da. Banda</div>
+          <div style="border-left: 6px solid #000; padding-left:8px;">
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="0">
+              <span style="display:inline-block; width:90px; background:#000; color:#fff; padding:6px 10px;">0</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="1">
+              <span style="display:inline-block; width:90px; background:#8B5A2B; color:#fff; padding:6px 10px;">1</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="2">
+              <span style="display:inline-block; width:90px; background:#D32F2F; color:#fff; padding:6px 10px;">2</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="3">
+              <span style="display:inline-block; width:90px; background:#F57C00; color:#fff; padding:6px 10px;">3</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="4">
+              <span style="display:inline-block; width:90px; background:#CDDC39; color:#000; padding:6px 10px;">4</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="5">
+              <span style="display:inline-block; width:90px; background:#4CAF50; color:#fff; padding:6px 10px;">5</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="6">
+              <span style="display:inline-block; width:90px; background:#1976D2; color:#fff; padding:6px 10px;">6</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="7">
+              <span style="display:inline-block; width:90px; background:#7B1FA2; color:#fff; padding:6px 10px;">7</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="8">
+              <span style="display:inline-block; width:90px; background:#9E9E9E; color:#000; padding:6px 10px;">8</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color2" value="9">
+              <span style="display:inline-block; width:90px; background:#BDBDBD; color:#000; padding:6px 10px;">9</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 3ra. Banda Multiplicador -->
+        <div style="width: 220px;">
+          <div style="text-align:center; font-weight:600; margin-bottom:6px;">3ra. Banda<br>Multiplicador</div>
+          <div style="border-left: 6px solid #000; padding-left:8px;">
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="1">
+              <span style="display:inline-block; width:140px; background:#000; color:#fff; padding:6px 10px;">x1</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="10">
+              <span style="display:inline-block; width:140px; background:#8B5A2B; color:#fff; padding:6px 10px;">x10</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="100">
+              <span style="display:inline-block; width:140px; background:#D32F2F; color:#fff; padding:6px 10px;">x100</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="1000">
+              <span style="display:inline-block; width:140px; background:#F57C00; color:#fff; padding:6px 10px;">x1000</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="10000">
+              <span style="display:inline-block; width:140px; background:#CDDC39; color:#000; padding:6px 10px;">x10000</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="100000">
+              <span style="display:inline-block; width:140px; background:#4CAF50; color:#fff; padding:6px 10px;">x100000</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="1000000">
+              <span style="display:inline-block; width:140px; background:#1976D2; color:#fff; padding:6px 10px;">x1000000</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="10000000">
+              <span style="display:inline-block; width:140px; background:#7B1FA2; color:#fff; padding:6px 10px;">x10000000</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="100000000">
+              <span style="display:inline-block; width:140px; background:#9E9E9E; color:#000; padding:6px 10px;">x100000000</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:10px; margin:4px 0;">
+              <input type="radio" formControlName="color3" value="1000000000">
+              <span style="display:inline-block; width:140px; background:#BDBDBD; color:#000; padding:6px 10px;">x1000000000</span>
+            </label>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Sección de Tolerancia -->
+      <div style="margin-top: 50px; display: flex; flex-direction: column; align-items: flex-start;">
+        <!-- Texto "Tolerancia" arriba de los inputs -->
+        <p>Tolerancia</p>
+  
+        <!-- Opciones de radio para "Oro" y "Plata" -->
+        <label>
+          <input type="radio" formControlName="tolerancia" value="oro"> Oro
+        </label>
+        <label>
+          <input type="radio" formControlName="tolerancia" value="plata"> Plata
+        </label>
+      </div>
+  
+      <!-- Botón de Registrar -->
+      <button type="submit" style="margin-top: 20px;" [disabled]="!resistenciaForm.valid">Calcular</button>
+    </form>
+  
+    <!-- Resultados -->
+    <div *ngIf="resultado">
+      <table border="1" style="margin-top: 20px; margin-left: auto; margin-right: auto; border-spacing: 10px; border-collapse: separate;">
+        <thead>
+          <tr>
+            <th>Color1</th>
+            <th>Color2</th>
+            <th>Color3</th>
+            <th>Tolerancia</th>
+            <th>Valor</th>
+            <th>Valor Máximo</th>
+            <th>Valor Mínimo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- Color 1 -->
+            <td [ngStyle]="{'background-color': getColorCode(getColorNameFromIndex(resistenciaForm.value.color1)), 'padding': '10px', 'border-bottom': '1px solid black'}">
+              {{ getColorNameFromIndex(resistenciaForm.value.color1) }}
+            </td>
+  
+            <!-- Color 2 -->
+            <td [ngStyle]="{'background-color': getColorCode(getColorNameFromIndex(resistenciaForm.value.color2)), 'padding': '10px', 'border-bottom': ''}">
+              {{ getColorNameFromIndex(resistenciaForm.value.color2) }}
+            </td>
+  
+            <!-- Color 3 -->
+            <td [ngStyle]="{'background-color': getColorCode(getColorNameFromMultiplier(resistenciaForm.value.color3)), 'padding': '10px', 'border-bottom': ''}">
+              {{ getColorNameFromMultiplier(resistenciaForm.value.color3) }}
+            </td>
+  
+            <!-- Tolerancia -->
+            <td [ngStyle]="{'background-color': getToleranceColor(), 'padding': '10px', 'border-bottom': ''}">
+              {{resistenciaForm.value.tolerancia === 'oro' ? 'Dorado 5%' : 'Plata 10%'}}
+            </td>
+  
+            <!-- Valor -->
+            <td [ngStyle]="{'padding': '10px', 'border-bottom': ''}">{{valor}}</td>
+  
+            <!-- Valor Máximo -->
+            <td [ngStyle]="{'padding': '10px', 'border-bottom': ''}">{{valorMaximo}}</td>
+  
+            <!-- Valor Mínimo -->
+            <td [ngStyle]="{'padding': '10px', 'border-bottom': ''}">{{valorMinimo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Historial de cálculos -->
+    <div *ngIf="historial.length > 0" style="margin-top: 30px;">
+      <table border="1" style="margin-top: 10px; margin-left: auto; margin-right: auto; border-spacing: 10px; border-collapse: separate;">
+
+        <tbody>
+          <tr *ngFor="let item of historial">
+            <td [ngStyle]="{'background-color': getColorCode(item.color1), 'padding': '10px'}">{{ item.color1 }}</td>
+            <td [ngStyle]="{'background-color': getColorCode(item.color2), 'padding': '10px'}">{{ item.color2 }}</td>
+            <td [ngStyle]="{'background-color': getColorCode(item.color3), 'padding': '10px'}">{{ item.color3 }}</td>
+            <td [ngStyle]="{'background-color': (item.tolerancia === 'oro' ? 'gold' : 'silver'), 'padding': '10px'}">
+              {{ item.tolerancia === 'oro' ? 'Dorado 5%' : 'Plata 10%' }}
+            </td>
+            <td style="padding: 10px;">{{ item.valor }}</td>
+            <td style="padding: 10px;">{{ item.valorMaximo }}</td>
+            <td style="padding: 10px;">{{ item.valorMinimo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

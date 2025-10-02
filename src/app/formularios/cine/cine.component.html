@@ -1,0 +1,24 @@
+<div>
+    <h1>Cinepolis</h1>
+    
+    <label for="nombre">Nombre:</label><br>
+    <input id="nombre" [(ngModel)]="nombre" /><br>
+  
+    <label for="cantidadCompradores">Cantidad de Compradores:</label><br>
+    <input id="cantidadCompradores" type="number" [(ngModel)]="cantidadCompradores" min="1" /><br>
+  
+    <label for="pagoCineco">Pago con Tarjeta CINECO:</label>
+    <input id="pagoCineco" type="checkbox" [(ngModel)]="pagoCineco" /><br><br>
+  
+    <label for="cantidad">Cantidad de Boletos:</label><br>
+    <input id="cantidad" type="number" [(ngModel)]="cantidadBoletos" min="0" max="7" />
+  
+    <button (click)="procesar()">Procesar</button>
+    <button (click)="salir()">Salir</button>
+  
+    <div *ngIf="nombre && cantidadBoletos > 0">
+      <p>Nombre: {{ nombre }}</p>
+      <p>Total a pagar: {{ totalFinal }}</p>
+    </div>
+  </div>
+  
